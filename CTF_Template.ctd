@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cherrytree>
+  <node name="CTF Template" unique_id="184" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="10" is_bold="1" foreground="" ts_creation="1621324486" ts_lastsave="1626315302">
+    <rich_text>Hostname:		
+IP:  					</rich_text>
+    <node name="Enumeration" unique_id="185" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="21" is_bold="1" foreground="" ts_creation="1621324486" ts_lastsave="1621324486">
+      <rich_text underline="single" weight="heavy">Network Scanning</rich_text>
+      <rich_text>
+
+      ☐  nmap -sn 10.11.1.*
+      ☐  nmap -sL 10.11.1.*
+      ☐  nbtscan -r 10.11.1.0/24
+      ☐  smbtree
+
+</rich_text>
+      <rich_text underline="single" weight="heavy">Individual Host Scanning</rich_text>
+      <rich_text>
+      ☐  fastTCPScan -h {</rich_text>
+      <rich_text weight="heavy">target</rich_text>
+      <rich_text>} -threads {</rich_text>
+      <rich_text weight="heavy">hilos</rich_text>
+      <rich_text>} -timeout {</rich_text>
+      <rich_text weight="heavy">time</rich_text>
+      <rich_text>}
+      ☐  nmap  --top-ports 20 --open -iL </rich_text>
+      <rich_text weight="heavy">iplist.txt</rich_text>
+      <rich_text>
+      ☐  nmap -sS -A -sV -O -p-  </rich_text>
+      <rich_text weight="heavy">ipaddress</rich_text>
+      <rich_text>
+      ☐  nmap -sU </rich_text>
+      <rich_text weight="heavy">ipaddress</rich_text>
+      <rich_text>
+      ☐  nmap -sS -sV -p {</rich_text>
+      <rich_text weight="heavy">open ports</rich_text>
+      <rich_text>} --scripts {</rich_text>
+      <rich_text weight="heavy">scripts</rich_text>
+      <rich_text>}
+      ☐ masscan -p1-65535,U:1-65535 </rich_text>
+      <rich_text weight="heavy">{IP}</rich_text>
+      <rich_text> --rate=</rich_text>
+      <rich_text weight="heavy">{5400}</rich_text>
+      <rich_text> -e </rich_text>
+      <rich_text underline="single" weight="heavy">{Ifce}</rich_text>
+      <rich_text> 	
+      ☐ masscan -p1-65535,T:1-65535 </rich_text>
+      <rich_text weight="heavy">{IP}</rich_text>
+      <rich_text> --rate=</rich_text>
+      <rich_text weight="heavy">{5400}</rich_text>
+      <rich_text> -e </rich_text>
+      <rich_text underline="single" weight="heavy">{Ifce}</rich_text>
+      <rich_text> 
+
+</rich_text>
+      <rich_text underline="single" weight="heavy">Common services</rich_text>
+      <rich_text>
+      ☐  21    /  ftp
+      ☐  22    /  ssh 	
+      ☐ 135   / msrpc
+      ☐ 139   / netbios-ssn used for samba
+      ☐ 445   / samba
+      ☐ 1433 / ms-sql
+
+</rich_text>
+      <rich_text underline="single" weight="heavy">Service Scanning</rich_text>
+      <rich_text>
+
+    </rich_text>
+      <rich_text weight="heavy">WebApp</rich_text>
+      <rich_text>
+      ☐   Nikto
+      ☐   dirb
+      ☐   dirbuster
+      ☐   wpscan
+      ☐   dotdotpwn
+      ☐   view source 
+      ☐   davtest\cadevar
+      ☐   droopscan
+      ☐   joomscan
+      ☐   LFI\RFI Test
+</rich_text>
+      <node name="Net Services" unique_id="186" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="17" is_bold="0" foreground="" ts_creation="1621324486" ts_lastsave="1621324486">
+        <node name="TCP" unique_id="187" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="18" is_bold="0" foreground="" ts_creation="1621324486" ts_lastsave="1621324486"/>
+        <node name="UDP" unique_id="188" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="18" is_bold="0" foreground="" ts_creation="1621324486" ts_lastsave="1621324486"/>
+      </node>
+      <node name="Web Services" unique_id="189" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="17" is_bold="0" foreground="" ts_creation="1621324486" ts_lastsave="1621324486">
+        <node name="WhatWeb" unique_id="190" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="18" is_bold="0" foreground="" ts_creation="1621324486" ts_lastsave="1621324486"/>
+        <node name="Nikto" unique_id="191" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="18" is_bold="0" foreground="" ts_creation="1621324486" ts_lastsave="1621324486"/>
+        <node name="Fuzzing" unique_id="192" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="18" is_bold="0" foreground="" ts_creation="1621324486" ts_lastsave="1621324486"/>
+        <node name="CMS" unique_id="193" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="18" is_bold="0" foreground="" ts_creation="1621324486" ts_lastsave="1621324486"/>
+      </node>
+    </node>
+    <node name="Exploitation" unique_id="194" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="22" is_bold="1" foreground="" ts_creation="1621324486" ts_lastsave="1621324486">
+      <rich_text underline="single" weight="heavy">Exploitation</rich_text>
+      <rich_text>
+      ☐   Gather Version Numbers
+      ☐   Discovering vulnerabilities
+      ☐   Searchsploit
+      ☐   Exploit codes
+      ☐   Default Creds
+      ☐   Creds Previously Gathered
+      ☐   Download the software
+
+
+</rich_text>
+      <rich_text weight="heavy">Service Exploited:
+CVE:	  
+Vulnerability Type:
+Exploit POC:</rich_text>
+      <rich_text>
+</rich_text>
+      <rich_text weight="heavy">Description</rich_text>
+      <rich_text>: </rich_text>
+    </node>
+    <node name="Post Exploitation" unique_id="195" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="38" is_bold="1" foreground="" ts_creation="1621324486" ts_lastsave="1621324486">
+      <rich_text>	</rich_text>
+      <rich_text weight="heavy">Miscellaneous Scripts</rich_text>
+      <rich_text> </rich_text>
+      <rich_text weight="heavy">/  Utilities</rich_text>
+      <rich_text>
+      ☐   python3 mssqlclient.py
+      ☐   python3 -m http.server 80
+      ☐   Impacket-smbserver </rich_text>
+      <rich_text weight="heavy">[File]</rich_text>
+      <rich_text> $(</rich_text>
+      <rich_text weight="heavy">Share_path</rich_text>
+      <rich_text>
+      ☐ 	Get-procces
+      ☐   Systeminfo
+      ☐ 	ipconfig /  ifconfig
+      ☐   netstat -an
+      ☐   Schtasks
+      ☐   tasklist
+
+</rich_text>
+      <node name="Info gattering" unique_id="196" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="18" is_bold="0" foreground="" ts_creation="1621324486" ts_lastsave="1621324486">
+        <node name="Host Information" unique_id="197" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="18" is_bold="0" foreground="" ts_creation="1621324486" ts_lastsave="1621324486">
+          <rich_text underline="single" weight="heavy">Systeminfo</rich_text>
+          <rich_text>
+
+
+
+</rich_text>
+          <rich_text underline="single" weight="heavy">Console History</rich_text>
+          <rich_text>
+</rich_text>
+        </node>
+        <node name="File System" unique_id="198" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="18" is_bold="0" foreground="" ts_creation="1621324486" ts_lastsave="1621324486">
+          <rich_text underline="single" weight="heavy">Writeable Files\Directories</rich_text>
+          <rich_text>
+
+
+
+</rich_text>
+          <rich_text underline="single" weight="heavy">Directory List</rich_text>
+          <rich_text>
+
+
+
+
+</rich_text>
+        </node>
+        <node name="Installed Applications" unique_id="199" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="18" is_bold="0" foreground="" ts_creation="1621324486" ts_lastsave="1621324486">
+          <rich_text underline="single" weight="heavy">Installed Applications</rich_text>
+        </node>
+        <node name="Running Processes" unique_id="200" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="18" is_bold="0" foreground="" ts_creation="1621324486" ts_lastsave="1621324486">
+          <rich_text underline="single" weight="heavy">Process List</rich_text>
+          <rich_text>
+
+</rich_text>
+        </node>
+        <node name="Scheduled Jobs" unique_id="201" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="18" is_bold="0" foreground="" ts_creation="1621324486" ts_lastsave="1626143818">
+          <rich_text underline="single" weight="heavy">Scheduled Tasks</rich_text>
+          <rich_text>	
+
+☐ Crontab -l
+
+☐ /etc/crontab
+
+☐ systemctl list-timers
+
+☐ wmic service get name,displayname,pathname,startmode |findstr /i "auto"|findstr /i /v "c:\windows"
+
+☐ </rich_text>
+          <rich_text family="monospace">schtasks.exe</rich_text>
+          <rich_text>
+
+
+
+
+
+
+
+
+
+
+</rich_text>
+        </node>
+        <node name="Network" unique_id="202" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="18" is_bold="0" foreground="" ts_creation="1621324486" ts_lastsave="1621324486">
+          <rich_text underline="single" weight="heavy">IPConfig\IFConfig
+</rich_text>
+          <rich_text>
+
+
+</rich_text>
+          <rich_text underline="single" weight="heavy">Network Processes</rich_text>
+          <rich_text>
+
+
+
+
+</rich_text>
+          <rich_text underline="single" weight="heavy">ARP</rich_text>
+          <rich_text>
+
+
+
+</rich_text>
+          <rich_text underline="single" weight="heavy">DNS</rich_text>
+          <rich_text>
+
+
+
+
+</rich_text>
+          <rich_text underline="single" weight="heavy">Route</rich_text>
+          <rich_text>
+</rich_text>
+        </node>
+      </node>
+    </node>
+    <node name="Priv Escalation" unique_id="203" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="15" is_bold="1" foreground="" ts_creation="1621324486" ts_lastsave="1621324486">
+      <rich_text underline="single" weight="heavy">Priv Escalation</rich_text>
+      <rich_text>
+      ☐  acesss internal services (portfwd)
+      ☐  add account
+
+</rich_text>
+      <rich_text underline="single" weight="heavy">Methods Linux</rich_text>
+      <rich_text>
+      ☐ Kernel Exploits
+      ☐ Weake File Permissions
+      ☐ Service Exploits
+      ☐ Sudo Bypass
+      ☐ SUID/GUID Executables
+      ☐ Passwords &amp; Keys
+      ☐ Shared Files
+      ☐ Capabilities
+      ☐ Cron Jobs
+
+</rich_text>
+      <rich_text underline="single" weight="heavy">Tools</rich_text>
+      <rich_text>
+      ☐   linux-local-enum.sh
+      ☐   linuxprivchecker.py
+      ☐   linux-exploit-suggestor.sh
+      ☐   unix-privesc-check.py
+
+
+</rich_text>
+      <rich_text underline="single" weight="heavy">Methods Windows</rich_text>
+      <rich_text>
+      ☐ Kernel Exploits
+      ☐ Service Exploits
+      ☐ Registry Escalations
+      ☐ Passwords
+      ☐ Startup Applications
+      ☐ Token Impersonation
+      ☐ CVE -2019-1388
+
+</rich_text>
+      <rich_text underline="single" weight="heavy"> tools</rich_text>
+      <rich_text>
+      ☐   wpc.exe
+      ☐   windows-exploit-suggestor.py // need to be download
+      ☐   windows_privesc_check.py
+      ☐  	windows-privesc-check2.exe
+      ☐ 	wes.py			
+      ☐ nishang / reverse shells
+      ☐  PowerSploit / Priv esc
+      ☐  python3 psexec.py
+      ☐  python3 /usr/bin/crackmapexec || Cme smb target -u 'user' -p 'password'</rich_text>
+      <node name="Escalation" unique_id="204" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="38" is_bold="0" foreground="" ts_creation="1621324486" ts_lastsave="1621324486"/>
+    </node>
+    <node name="Credentials" unique_id="205" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="42" is_bold="1" foreground="" ts_creation="1621324486" ts_lastsave="1621324486">
+      <rich_text underline="single" weight="heavy">Loot fron machines</rich_text>
+      <rich_text>
+      ☐ Users
+      ☐ pass
+      ☐ Hash
+      ☐ Flags
+</rich_text>
+      <node name="Users &amp; Passwords" unique_id="206" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="18" is_bold="0" foreground="" ts_creation="1621324486" ts_lastsave="1621324486">
+        <rich_text>
+</rich_text>
+      </node>
+      <node name="Hashes" unique_id="207" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="18" is_bold="0" foreground="" ts_creation="1621324486" ts_lastsave="1621324486"/>
+      <node name="Proof\Flags\Other" unique_id="208" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="18" is_bold="0" foreground="" ts_creation="1621324486" ts_lastsave="1626481411">
+        <rich_text>
+Linux Get proof
+
+</rich_text>
+        <rich_text family="monospace">echo " ";echo "uname -a:";uname -a;echo " ";echo "hostname:";hostname;echo " ";echo "id";id;echo " ";echo "ifconfig:";/sbin/ifconfig -a;echo " ";echo "proof:";cat /root/proof.txt 2&gt;/dev/null; cat /Desktop/proof.txt 2&gt;/dev/null;echo " "</rich_text>
+        <rich_text>
+
+
+
+Windows</rich_text>
+      </node>
+    </node>
+    <node name="Cracking" unique_id="209" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="43" is_bold="1" foreground="" ts_creation="1621324486" ts_lastsave="1621324486">
+      <rich_text weight="heavy">Example of Linux Password Hash:</rich_text>
+      <rich_text> $1$e7NfNpNi$A6nCwOTqrNR2oDuIKirRZ
+• $1 = MD5 hashing algorithm.
+• $2 =Blowfish Algorithm is in use.
+• $2a=eksblowfish Algorithm
+• $5 =SHA-256 Algorithm
+• $6 =SHA-512 Algorithm
+
+</rich_text>
+    </node>
+    <node name="Notes" unique_id="210" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="18" is_bold="1" foreground="" ts_creation="1621324486" ts_lastsave="1621324486"/>
+  </node>
+</cherrytree>
